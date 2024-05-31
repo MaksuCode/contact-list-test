@@ -17,7 +17,7 @@ describe("Login - API", () => {
     cy.log(`User is created ${JSON.stringify(user)}`);
   });
 
-  it.only("logins successfully", () => {
+  it("logins successfully", () => {
     let cookieVaue: string;
     userService
       .login(user.email, user.password)
