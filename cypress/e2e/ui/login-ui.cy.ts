@@ -23,7 +23,7 @@ describe("Login - UI", () => {
     cy.visit("/");
   });
 
-  it.only("logins successfully", () => {
+  it("logins successfully", () => {
     cy.intercept({ method: "POST", url: "/users/login" }).as("loginApi");
 
     loginPage.login(user.email, user.password);
