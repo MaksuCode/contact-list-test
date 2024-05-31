@@ -1,12 +1,24 @@
 export class UserService {
-  constructor() {}
+  PATH = "/users";
 
   createNewUser(user: User) {
     return cy.request({
-      url: "/users",
+      url: this.PATH,
       method: "POST",
       body: user,
-      failOnStatusCode: false, // turn off following redirects
+      failOnStatusCode: false,
+    });
+  }
+
+  login(email: string, password: string) {
+    return cy.request({
+      url: `${this.PATH}/login`,
+      method: "POST",
+      body: {
+        email: email,
+        password: password,
+      },
+      failOnStatusCode: false,
     });
   }
 }

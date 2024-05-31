@@ -7,6 +7,8 @@ module.exports = defineConfig({
     },
     baseUrl: "https://thinking-tester-contact-list.herokuapp.com/",
     watchForFileChanges: false,
-    failOnStatusCode: false,
+  },
+  env: {
+    token: "",
   },
 });
