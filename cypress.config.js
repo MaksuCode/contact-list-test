@@ -6,5 +6,7 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
     baseUrl: "https://thinking-tester-contact-list.herokuapp.com/",
+    watchForFileChanges: false,
+    failOnStatusCode: false,
   },
 });
